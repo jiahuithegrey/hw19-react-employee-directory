@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../../employee.json";
 import "./style.css";
+import data from "../../employee.json";
 
 class Table extends React.Component {
   constructor(props) {
@@ -19,14 +19,17 @@ class Table extends React.Component {
     });
 
     return (
-      <React.Fragment> 
+      <React.Fragment>
         <table className="table">
           <thead>
-              <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Title</th>
-            <th>Department</th>
+            <tr>
+              <th>Id</th>
+              <th>Headshot</th>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Department</th>
+              <th>Phone Number</th>
+              <th>Email</th>
             </tr>
           </thead>
 
