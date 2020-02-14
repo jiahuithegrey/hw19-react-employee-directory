@@ -1,5 +1,6 @@
 import React from "react";
-import data from "../data/employee.json";
+import data from "../../employee.json";
+import "./style.css";
 
 class Table extends React.Component {
   constructor(props) {

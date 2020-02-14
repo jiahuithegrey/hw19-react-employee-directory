@@ -1,32 +1,28 @@
-import React from 'react';
-import Table from './components/Table';
-import "./App.css";
+import React, {Component} from "react";
+import Navbar from "./components/Navbar";
+import Table from "./components/Table";
+import employees from "./employee.json";
 
-function App() {
-  return (
-    <React.Fragment>
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  //what is this.state.employee???????
+  //setting this.state.employee to the employee.json array
+  state = { employees };
 
-    </div>
-   
-      <Table />
-    </React.Fragment>
-      
-  );
+  removeEmployee = id => {
+    //filter this.state.employee for employees with an id not equal to the id being removed
+    const employees = this.state.employees.filter(employee => employee.id !== id);
+    //set this.state.employee equal to the new employees array
+    this.setState({ employees });
+  };
+
+  render(){
+    return (
+      <React.Fragment>
+        <Navbar/>
+        <Table />
+      </React.Fragment>   
+    );
+  }
 }
 
 export default App;
