@@ -5,7 +5,7 @@ export default {
   getEmployees: function() {
     return axios.get("/api/employees");
   },
-  // Gets the book with the given id
+  // Gets the employee with the given id
   getEmployee: function(id) {
     return axios.get("/api/employees/" + id);
   },
@@ -13,7 +13,7 @@ export default {
   deleteEmployee: function(id) {
     return axios.delete("/api/employees/" + id);
   },
-  // Saves a book to the database
+  // Saves a employee to the database
   saveEmployee: function(bookData) {
     return axios.post("/api/employees", employeeData);
   }
