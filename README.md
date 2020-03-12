@@ -16,7 +16,14 @@ Given a table of random users, when the user loads the page, a table of employee
 
 The user should be able to:
 
+  * filter employees by name.
   * Sort the table by at least one category
-
   * Filter the users by at least one property.
 
+## Submission on BCS
+
+You are required to submit the following:
+
+* the URL to the deployed application
+
+* the URL to the Github repository

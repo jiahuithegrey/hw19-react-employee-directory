@@ -1,18 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar";
-import AddBtn from "./components/AddBtn";
 import Table from "./components/Table";
 
-class App extends Component{
-  render(){
-    return (
-      <React.Fragment>
-        <Navbar/>
-        <Table />
-      </React.Fragment>   
-    );
-  }
+function App() {
+  return (
+    <React.Fragment>
+      <Navbar/>
+      <Table />
+    </React.Fragment>   
+  );
 }
-  
 
 export default App;
