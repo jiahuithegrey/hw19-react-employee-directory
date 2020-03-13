@@ -16,8 +16,8 @@ Given a table of random users, when the user loads the page, a table of employee
 
 The user should be able to:
 
-  * filter employees by name.
   * Sort the table by at least one category
+  * filter employees by name.
   * Filter the users by at least one property.
 
 ## Submission on BCS

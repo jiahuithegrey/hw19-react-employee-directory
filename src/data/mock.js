@@ -1,4 +1,4 @@
-[
+const employees = [
   {
     "id": 1,
     "first_name": "Shepherd",

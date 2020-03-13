@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import { DropdownButton, Dropdown } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 function SeachBar(props) {
@@ -12,9 +12,9 @@ function SeachBar(props) {
       .value()
       .trim()
       .toLowerCase();
-    let searchDropDown = document.getElementById("search-dropdown");
+    let searchSelect = document.getElementById("searchSelect");
     let searchCategory =
-      searchDropDown.options[(searchDropDown, selectedIndex)].value;
+      searchSelect.options[searchSelect.selectedIndex].value;
     return { searchTerm, searchCategory };
   }
 

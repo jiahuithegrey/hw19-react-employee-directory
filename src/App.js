@@ -1,14 +1,20 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from "./components/Navbar";
-import Table from "./components/Table";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Main from "./components/Main";
+import { Jumbotron } from "react-bootstrap";
 
 function App() {
   return (
     <React.Fragment>
-      <Navbar/>
-      <Table />
-    </React.Fragment>   
+      <div className="container">
+        <div classname="row">
+          <div classname="col-12">
+            <Jumbotron />
+          </div>
+          <Main />
+        </div>
+      </div>
+    </React.Fragment>
   );
 }
 
