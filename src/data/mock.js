@@ -1,4 +1,4 @@
-const employees = [
+const users = [
   {
     "id": 1,
     "first_name": "Shepherd",

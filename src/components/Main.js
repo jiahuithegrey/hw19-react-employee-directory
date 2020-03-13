@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import EmployeeTable from "./EmployeeTable";
 import SearchBar from "./SeachBar";
-import Employees from "../data/mock.js";
+import Users from "../data/mock.js";
 
-let data = Employees.map(employee => {
+let data = Users.map(user => {
   let {
     login: { uuid: id },
     name: { first: firstName, last: lastName },
@@ -11,39 +11,39 @@ let data = Employees.map(employee => {
     gender,
     phone: phoneNumber,
     picture: { thumbnail }
-  } = employee;
+  } = user;
   return { id, firstName, lastName, email, gender, thumbnail, phoneNumber };
 });
+
 data.sort((a, b) => a.lastName.localeCompare(b.lastName));
 const initialState = data;
 
 function Main() {
-  const [employees, setEmployees] = useState([]);
+  const [users, setUsers] = useState([]);
 
   const handleSubmit = data => {
     const { searchTerm, searchCategory } = data;
-    let allEmployees = initialState;
+    let allUsers = initialState;
     if (searchTerm) {
-      let usersFiltered = allEmployees.filter(employee =>
-        employee[searchCategory]
+      let usersFiltered = allUsers.filter(user =>
+        user[searchCategory]
           .toString()
           .toLowerCase()
           .includes(searchTerm)
       );
-      setEmployees(usersFiltered);
+      setUsers(usersFiltered);
     } else {
-      setEmployees(initialState);
+      setUsers(initialState);
     }
   };
 
   useEffect(() => {
-    setEmployees(initialState);
+    setUsers(initialState);
   }, []);
-
   return (
     <div className="col-12">
       <SearchBar handleSubmit={handleSubmit} />
-      <EmployeeTable employees={employees} />
+      <EmployeeTable users={users} />
     </div>
   );
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 function TableHead(props) {
   const { colNames, changeSortOrder, sort } = props;
-
   let icon;
-  if (ShadowRoot.order === "ASC") {
+
+  if (sort.order === "ASC") {
     icon = <i className="fas fa-sort-up"></i>;
   } else {
     icon = <i className="fas fa-sort-down"></i>;
